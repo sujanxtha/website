@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sujan Shrestha — Web Developer</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="logo" href="index.html">Sujan<span class="accent">.</span></a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav class="main-nav" id="main-nav">
+         <button id="nav-close" class="nav-close" aria-label="Close navigation">×</button>
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-inner container">
+
+      <div class="hero-content">
+        <h1>Hi, I’m <strong>Sujan Shrestha</strong></h1>
+        <p class="tagline">Web developer — 3+ years building modern, responsive websites and web apps.</p>
+
+        <ul class="quick-info">
+          <li><strong>Age</strong><span>25</span></li>
+          <li><strong>Role</strong><span>Frontend & Full-Stack Developer</span></li>
+          <li><strong>Stack</strong><span>HTML • CSS • JS • Bootstrap • Tailwind • Laravel • Django</span></li>
+        </ul>
+
+        <div class="hero-ctas">
+          <a href="portfolio.html" class="btn primary">See my work</a>
+          <a href="contact.html" class="btn ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop"
+             alt="Developer coding on a laptop at a desk">
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- SKILLS -->
+  <section class="skills container">
+    <h2>Skills</h2>
+    <p class="muted">Technologies I use regularly</p>
+
+    <div class="skill-grid">
+      <span class="skill">HTML</span>
+      <span class="skill">CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Bootstrap</span>
+      <span class="skill">Tailwind CSS</span>
+      <span class="skill">Laravel</span>
+      <span class="skill">PHP</span>
+      <span class="skill">Python</span>
+      <span class="skill">Django</span>
+      <span class="skill">WordPress</span>
+    </div>
+  </section>
+
+
+
+  <!-- FEATURED PROJECT -->
+  <section class="featured container">
+    <h2>Featured Project</h2>
+
+    <div class="featured-card">
+      <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1200&auto=format&fit=crop"
+           alt="Preview of a modern website template">
+
+      <div class="featured-body">
+        <h3>Modern Portfolio Template</h3>
+        <p>
+          Responsive, accessible portfolio template built with semantic HTML, CSS Grid,
+          and a small amount of JavaScript for interactivity.
+        </p>
+        <a href="portfolio.html" class="btn inline">View more projects</a>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- NOTES / TESTIMONIALS -->
+  <section class="testimonials container">
+    <h2>Quick Notes</h2>
+
+    <div class="notes">
+      <article>
+        <h4>Approach</h4>
+        <p>I focus on clean, maintainable code and responsive layouts that work well on mobile and desktop.</p>
+      </article>
+
+      <article>
+        <h4>Availability</h4>
+        <p>Open to freelance and full-time roles. Experienced collaborating with small teams.</p>
+      </article>
+    </div>
+  </section>
+
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Sujan Shrestha — Web Developer</p>
+
+      <nav class="foot-nav">
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+
+
+  <!-- SCRIPT -->
+  <script>
+    const toggle = document.getElementById('nav-toggle');
+    const nav = document.getElementById('main-nav');
+    const navClose = document.getElementById('nav-close');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+    navClose.addEventListener('click', () => {
+  nav.classList.remove('open');
+});
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio — Sujan Shrestha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="logo" href="index.html">Sujan<span class="accent">.</span></a>
+      <button id="nav-toggle-3" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav" id="main-nav-3">
+        <button id="nav-close" class="nav-close" aria-label="Close navigation">×</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html" aria-current="page">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container portfolio-page">
+    <section>
+      <h1>Selected Projects</h1>
+      <p class="muted">A handful of projects showing front-end and full-stack work.</p>
+
+      <div class="projects-grid">
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Project screenshot">
+          <div class="project-body">
+            <h3>Portfolio Template</h3>
+            <p>Personal portfolio template with responsive layout and accessible markup.</p>
+            <a class="btn inline" href="#">View case study</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="/ecom.jpg" alt="Project screenshot">
+          <div class="project-body">
+            <h3>E‑Commerce UI</h3>
+            <p>Clean product listing and checkout flow built with Bootstrap and minimal JS.</p>
+            <a class="btn inline" href="#">View details</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="https://images.unsplash.com/photo-1505685296765-3a2736de412f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Project screenshot">
+          <div class="project-body">
+            <h3>Blog & CMS</h3>
+            <p>WordPress and Django-powered blog prototypes with optimized article templates.</p>
+            <a class="btn inline" href="#">View details</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-3"></span> Sujan Shrestha</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-3').textContent = new Date().getFullYear();
+    document.getElementById('nav-toggle-3').addEventListener('click', ()=>{
+      document.getElementById('main-nav-3').classList.toggle('open');
+      document.getElementById('nav-close').addEventListener('click', ()=>{
+        document.getElementById('main-nav-3').classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>

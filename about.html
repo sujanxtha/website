@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Sujan Shrestha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a class="logo" href="index.html">Sujan<span class="accent">.</span></a>
+      <button id="nav-toggle-2" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+      <nav class="main-nav" id="main-nav-2">
+        <button id="nav-close" class="nav-close" aria-label="Close navigation">×</button>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container about-page">
+    <section class="about-intro">
+      <div class="about-inner">
+        <div class="photo">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0" alt="Developer at work">
+        </div>
+        <div class="bio">
+          <h1>About Me</h1>
+          <p class="lead">Hi — I’m <strong>Sujan Shrestha</strong>, a <strong>25</strong>-year-old web developer with more than <strong>3 years</strong> of experience building websites and web applications.</p>
+
+          <p>I specialize in modern, responsive front-end development and have practical experience in back-end frameworks. I enjoy creating accessible interfaces, optimizing performance, and learning new technologies.</p>
+
+          <ul class="meta-list">
+            <li><strong>Location:</strong> Helsinki (open to remote)</li>
+            <li><strong>Role:</strong> Frontend / Full‑Stack Developer</li>
+            <li><strong>Experience:</strong> HTML, CSS, JavaScript, Bootstrap, Tailwind CSS, Laravel, PHP, Python, Django, WordPress</li>
+          </ul>
+
+          <a class="btn primary" href="portfolio.html">View portfolio</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience">
+      <h2>Experience & Workflow</h2>
+      <div class="exp-grid">
+        <div>
+          <h3>Front-end</h3>
+          <p>Pixel-perfect layouts with responsive breakpoints, utilities-first approaches with Tailwind and component-based styling using modern CSS techniques.</p>
+        </div>
+        <div>
+          <h3>Back-end</h3>
+          <p>Experience building simple APIs and server-side logic using Laravel (PHP) and Django (Python). Comfortable working with databases and deployments.</p>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <p>Git, VS Code, Browser devtools, build tooling and familiarity with deployment on shared hosts and basic container workflows.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="education">
+      <h2>Education & Training</h2>
+      <p>Self-taught developer with formal and informal courses in web development and computing. I enjoy learning by building real projects.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year-2"></span> Sujan Shrestha</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year-2').textContent = new Date().getFullYear();
+    document.getElementById('nav-toggle-2').addEventListener('click', ()=>{
+      document.getElementById('main-nav-2').classList.toggle('open');
+      document.getElementById('nav-close').addEventListener('click', ()=>{
+        document.getElementById('main-nav-2').classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>
